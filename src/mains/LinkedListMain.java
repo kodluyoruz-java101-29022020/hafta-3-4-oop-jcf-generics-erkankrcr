@@ -21,6 +21,7 @@ public class LinkedListMain {
 		nodeList.addNode("Deneme 9");
 		nodeList.addNode("Deneme 10");
 		Node<String> node = null;
+		
 		try {
 			nodeList.addNode("Erkan",0);
 			nodeList.removeNode(nodeList.getLength());
@@ -29,15 +30,7 @@ public class LinkedListMain {
 		} catch (NodeNotFoundException e) {
 			e.printStackTrace();
 		}
-		
-		while(nodeList.hasNext()) {
-			node = nodeList.next();
-			System.out.println("Node :"+node);
-			System.out.println("Previous Node :"+node.getPreviousNode());
-			System.out.println("Value :"+node.getValue());
-			System.out.println("Next Node :"+node.getNextNode());
-			System.out.println();
-		}
-		
+
+		nodeList.print();
 	}
 }
