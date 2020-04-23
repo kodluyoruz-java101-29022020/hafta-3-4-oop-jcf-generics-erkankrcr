@@ -24,13 +24,16 @@ public class LinkedListMain {
 		
 		try {
 			nodeList.addNode("Erkan",0);
-			nodeList.removeNode(nodeList.getLength());
+			
+			for(int i = 0; i<=10;i++) {
+				System.out.println(nodeList.findNode(i).getValue());
+			}
 		} catch (IndexNotFoundException e) {
 			e.printStackTrace();
 		} catch (NodeNotFoundException e) {
 			e.printStackTrace();
 		}
 
-		nodeList.print();
+		//nodeList.print();
 	}
 }

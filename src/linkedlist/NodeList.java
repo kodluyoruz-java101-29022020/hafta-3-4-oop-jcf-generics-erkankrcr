@@ -135,6 +135,8 @@ public class NodeList<T> {
 	}
 	
 	public Node<T> findNode(int index) throws IndexNotFoundException, NodeNotFoundException {
+		tempClear();
+		checkCurrentIndex();
 		if(index<0) {
 			throw new IndexNotFoundException();
 		}
